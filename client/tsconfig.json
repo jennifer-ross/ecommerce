@@ -1,0 +1,66 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "ES2021", "ES2017", "DOM", "DOM.Iterable", "ES6", "ESNext", "ES7"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": false,
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noFallthroughCasesInSwitch": true,
+    "noEmit": true,
+    "outDir": "dist",
+    "baseUrl": ".",
+    "jsx": "react-jsx"
+  },
+//  "ts-node": {
+//    "esm": true,
+//    "module": "ESNext",
+//    "moduleResolution": "NodeNext",
+//    "target": "ESNext",
+//    "esModuleInterop": true
+//  },
+//  "compilerOptions": {
+//    "target": "ESNext",
+//    "useDefineForClassFields": true,
+//    "lib": ["ES2020", "DOM", "DOM.Iterable", "ES6", "ESNext", "ES7"],
+//    "module": "ESNext",
+//    "skipLibCheck": true,
+//    "sourceMap": true,
+//    "outDir": "dist",
+//    "baseUrl": ".",
+//    "allowSyntheticDefaultImports": true,
+//    "esModuleInterop": false,
+//    "allowJs": false,
+//    "forceConsistentCasingInFileNames": true,
+//
+//    /* Bundler mode */
+//    "moduleResolution": "node",
+//    "allowImportingTsExtensions": true,
+//    "resolveJsonModule": true,
+//    "isolatedModules": true,
+//    "experimentalDecorators": true,
+//    "noEmit": true,
+//    "jsx": "react-jsx",
+//
+//    /* Linting */
+//    "strict": true,
+//    "noUnusedLocals": true,
+//    "noUnusedParameters": true,
+//    "noFallthroughCasesInSwitch": true
+//  },
+  "exclude": [
+    "node_modules",
+    "src/**/*.spec.ts",
+    "spec/**/*"
+  ],
+  "include": ["src/"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
