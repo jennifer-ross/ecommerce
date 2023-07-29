@@ -1,6 +1,8 @@
 # compiled output
+/dist
 */dist
 */node_modules
+/node_modules
 client/node_modules
 server/node_modules
 
@@ -21,6 +23,7 @@ lerna-debug.log*
 /.nyc_output
 
 # IDEs and editors
+/.idea
 */.idea
 client/.idea
 server/.idea
