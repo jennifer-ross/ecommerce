@@ -1,5 +1,7 @@
 import { Helmet } from 'react-helmet-async'
 import React, { PropsWithChildren } from 'react'
+import { PropsWithStore } from '../Interfaces/mobx'
+import ioc from '../lib/ioc'
 
 export type IPageProps = {
     title: string
@@ -7,10 +9,13 @@ export type IPageProps = {
     ogType?: string
     creator?: string
 }
-
-export class Page extends React.PureComponent<PropsWithChildren<IPageProps>> {
+export class Page extends React.PureComponent<
+    PropsWithChildren<IPageProps> & PropsWithStore
+> {
     render() {
         const { title, description, ogType, creator, children } = this.props
+
+        // console.log(ioc.sessionService)
 
         return (
             <>
