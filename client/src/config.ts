@@ -1,0 +1,5 @@
+export const API_ORIGIN = '127.0.0.1'
+export const API_TOKEN = 'Authorization'
+export const ERROR_PAGE = '/error'
+export const OFFLINE_PAGE = '/offline'
+export const DENIED_PAGE = '/404'
