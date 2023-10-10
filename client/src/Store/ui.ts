@@ -1,21 +1,16 @@
 import { makeAutoObservable } from 'mobx'
-import { DefaultTheme } from 'styled-components'
-
-import { ThemeTypes } from '../Interfaces/styled'
 import { darkTheme, lightTheme } from '../Styles/theme'
-import { RootStore } from './rootStore'
+import { ThemeConfig, theme } from 'antd'
 
 export class UIStore {
-    theme: DefaultTheme = lightTheme
-    private rootStore: RootStore | undefined
+    theme: ThemeConfig = lightTheme
 
-    constructor(rootStore?: RootStore) {
-        this.rootStore = rootStore
+    constructor() {
         makeAutoObservable(this)
     }
 
     get isLightTheme(): boolean {
-        return this.theme.type === ThemeTypes.light
+        return this.theme.algorithm === theme.defaultAlgorithm
     }
 
     toggleTheme(): void {
