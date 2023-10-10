@@ -4,6 +4,7 @@ import {
     UnauthorizedException,
 } from '@nestjs/common'
 import { AuthGuard } from '@nestjs/passport'
+import { FastifyRequest } from 'fastify'
 
 @Injectable()
 export class JwtAuthGuard extends AuthGuard('jwt') {
