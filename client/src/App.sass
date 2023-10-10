@@ -1,0 +1,41 @@
+*, *:before, *:after
+  box-sizing: border-box
+
+body
+  margin: 0
+  padding: 0
+
+#root, #app, .ant-app, .layout, .defalt-layout, .ant-layout, .layout-default
+  width: 100%
+  min-height: 100vh
+  height: 100%
+
+button:focus, button:focus-visible
+  outline: none
+
+.layout-default .ant-layout-header .header-nav a
+  span, svg
+    line-height: unset
+  svg
+    margin: 0
+
+.header-col.header-nav
+  margin-left: auto
+  //width: auto
+  margin-right: 0
+  .anticon
+    svg
+      line-height: unset
+      display: block
+      margin: 0
+  .ant-menu-overflow
+    justify-content: flex-end
+
+.sign-img
+  img
+    max-width: 600px
+
+@media (min-width: 768px)
+  .sign-img
+    img
+      margin: auto
