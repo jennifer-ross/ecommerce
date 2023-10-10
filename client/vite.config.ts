@@ -9,6 +9,13 @@ import { extname } from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+    esbuild: {
+        tsconfigRaw: {
+            compilerOptions: {
+                experimentalDecorators: true,
+            },
+        },
+    },
     root: '.',
     plugins: [
         tsconfigPaths({
@@ -16,7 +23,16 @@ export default defineConfig({
         }),
         babel({
             babelConfig: {
-                plugins: ['babel-plugin-styless'],
+                compact: false,
+                plugins: [
+                    'babel-plugin-styless',
+                    // [
+                    //     '@babel/plugin-proposal-decorators',
+                    //     { loose: true, version: '2022-03' },
+                    // ],
+                    // '@babel/plugin-syntax-decorators',
+                    // 'decorators-legacy',
+                ],
             },
             loader: (path) => {
                 if (extname(path) === '.jsx') {
@@ -28,7 +44,22 @@ export default defineConfig({
                 }
             },
         }),
-        react(),
+        react({
+            babel: {
+                compact: false,
+                parserOpts: {
+                    compact: false,
+                    plugins: [
+                        'decorators-legacy',
+                        // [
+                        //     '@babel/plugin-proposal-decorators',
+                        //     { loose: true, version: '2022-03' },
+                        // ],
+                        // '@babel/plugin-syntax-decorators',
+                    ],
+                },
+            },
+        }),
         reactRefresh(),
         manifestSRI(),
     ],

@@ -17,6 +17,9 @@
     "noFallthroughCasesInSwitch": true,
     "noEmit": true,
     "outDir": "dist",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "incremental": true,
     "baseUrl": ".",
     "jsx": "react-jsx"
   },

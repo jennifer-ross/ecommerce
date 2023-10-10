@@ -4,7 +4,8 @@
     "esModuleInterop": false,
     "moduleResolution": "Node",
     "module": "ESNext",
-    "target": "ESNext"
+    "target": "ESNext",
+    "experimentalDecorators": true
   },
 //  "compilerOptions": {
 //    "composite": true,
