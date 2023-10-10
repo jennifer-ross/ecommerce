@@ -1,6 +1,7 @@
 import React from 'react'
 import { IPageProps, Page } from '../Components/Page'
-import { Button } from '../Components/Button'
+import { Button } from 'antd'
+import TopLayout from '../Components/topLayout'
 
 export type IIndexPageProps = IPageProps & {}
 
@@ -11,7 +12,9 @@ class indexPage extends React.PureComponent<IIndexPageProps> {
         return (
             <>
                 <Page title={title} />
-                <Button style={'Outlined'}>Text</Button>
+                <TopLayout>
+                    <Button>Text</Button>
+                </TopLayout>
             </>
         )
     }
