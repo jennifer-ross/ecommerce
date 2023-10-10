@@ -17,7 +17,9 @@
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "typeRoots": ["./src/types/**/*"]
   },
+  "include": ["./src/**/*"],
   "exclude": ["./client/**/*"]
 }
